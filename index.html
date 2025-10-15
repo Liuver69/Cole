@@ -9,7 +9,7 @@
   --bg-light:#2c2c2c; /* fondo general más claro */
   --text:#e6eef6;
   --muted:#97a1ac;
-  --maxWidth:380px;
+  --maxWidth:480px; /* aumentamos el ancho de la portada */
 }
 html,body{
   height:100%;
@@ -35,11 +35,14 @@ html,body{
 /* Sección del grupo que resalta */
 #groupSection{
   background:rgba(0,0,0,0.85); /* fondo negro semi-transparente */
-  padding:20px;
+  padding:25px; /* un poco más de espacio interno */
   border-radius:12px;
-  margin-top:40px; /* separa del borde superior */
+  margin-top:40px; 
   text-align:center;
+  width:90%; /* ocupa más del ancho del contenedor */
+  max-width:480px; /* mismo que el contenedor para que no se salga */
 }
+
 .group-photo{width:80px;height:80px;border-radius:50%;border:2px solid #0ea5bf;object-fit:cover;margin-bottom:8px;}
 .channel-name{font-size:18px;font-weight:700;margin-bottom:4px;}
 .channel-sub{color:var(--muted);font-size:13px;margin-bottom:10px;}
