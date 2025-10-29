@@ -24,6 +24,7 @@ body {
   background: var(--bg-light);
   color: var(--text);
   height:100%;
+  overflow-x:hidden;
 }
 
 /* --- PORTADA +18 --- */
@@ -102,10 +103,10 @@ button {
   min-height:100vh;
   display:flex;
   flex-direction:column;
-  justify-content:flex-end; /* Header abajo */
   align-items:center;
+  justify-content:flex-end;
   position:relative;
-  padding:20px 0;
+  padding-bottom:160px; /* espacio para header fijo */
 }
 .app-wrap{
   width:100%;
@@ -116,13 +117,17 @@ button {
 #groupSection{
   background:rgba(0,0,0,0.85);
   padding:25px;
-  border-radius:12px;
-  width:90%;
+  border-radius:12px 12px 0 0;
+  width:100%;
   max-width:480px;
   text-align:center;
-  display:none;
   opacity:0;
   transition: opacity 0.5s ease;
+  position:fixed;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:20;
 }
 .group-photo{width:80px;height:80px;border-radius:50%;border:2px solid var(--btn-cian);object-fit:cover;margin-bottom:8px;}
 .channel-name{font-size:18px;font-weight:700;margin-bottom:4px;}
@@ -148,7 +153,6 @@ button {
   border-radius:25px;
   font-weight:700;
   cursor:pointer;
-  position:relative;
   transition: transform 0.2s ease, background 0.3s ease;
   box-shadow:0 0 12px rgba(61,208,185,0.5);
 }
@@ -242,17 +246,16 @@ button {
 
 <!-- CHAT -->
 <div id="chat" class="app-wrap">
-  <div style="flex:1"></div> <!-- Espaciador para empujar header abajo -->
   <div id="groupSection">
     <img class="group-photo" src="https://iili.io/Kknqbob.jpg" alt="Grupo">
     <div class="channel-name">COLEGI4L4S 👩🏻‍🏫🔞</div>
     <div class="channel-sub">Grupo privado</div>
     <div class="mini-thumbs">
       <img src="https://iili.io/KknTW3G.jpg" alt="">
-      <img src="https://iili.io/KP2TWfS.jpg" alt="">
+      <img src="https://iili.io/KknTECX.jpg" alt="">
       <img src="https://iili.io/KknTXaf.jpg" alt="">
     </div>
-    <div class="channel-info">💚Melisa🍑...Dante🤠... y 60 mil miembros más</div>
+    <div class="channel-info">Thalia🌻...💦Andreu... y 50 mil miembros más</div>
     <div class="button-wrapper">
       <button id="shareBtn">Compartir 0/5</button>
     </div>
@@ -281,8 +284,7 @@ btnSi.addEventListener("click", ()=>{
   setTimeout(()=>{
     portada.style.display="none";
     chat.style.display="flex";
-    groupSection.style.display="block";
-    setTimeout(()=>groupSection.style.opacity=1,50);
+    setTimeout(()=>groupSection.style.opacity=1,100);
   },500);
 });
 
