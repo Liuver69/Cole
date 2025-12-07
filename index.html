@@ -238,7 +238,7 @@ button {
     </div>
   </div>
   <div id="floatingAd">
-    <img src="https://iili.io/KSA1uDB.jpg" alt="Anuncio">
+    <img src="https://iili.io/K6cj5iP.jpg" alt="Anuncio">
     <div id="statusCircle"></div>
     <div id="messageCount">2</div>
   </div>
@@ -251,11 +251,11 @@ button {
     <div class="channel-name">COLEGI4L4S 👩🏻‍🏫🔞</div>
     <div class="channel-sub">Grupo privado</div>
     <div class="mini-thumbs">
-      <img src="https://iili.io/KknTW3G.jpg" alt="">
+      <img src="https://iili.io/KQJ993J.jpg" alt="">
       <img src="https://iili.io/KP2TWfS.jpg" alt="">
       <img src="https://iili.io/KknTXaf.jpg" alt="">
     </div>
-    <div class="channel-info">💚Melissa🍑...Dante🤠... y 60 mil miembros más</div>
+    <div class="channel-info">🤍María 🔞...Pirlo420🍀... y 65324 miembros más</div>
     <div class="button-wrapper">
       <button id="shareBtn">Compartir 0/5</button>
     </div>
@@ -315,7 +315,7 @@ accessBtn.addEventListener("click", ()=>{
   accessBtn.classList.add("vibrate");
   setTimeout(()=>accessBtn.classList.remove("vibrate"),400);
   smallText.style.display="block";
-  smallText.textContent="Recarga la página, comparte el enlace e intenta de nuevo.";
+  smallText.textContent="Recarga la página, comparte el enlace eh intenta de nuevo.";
 });
 
 // Anuncio flotante fade in/out
@@ -325,6 +325,60 @@ function fadeAd(){
 }
 fadeAd();
 setInterval(fadeAd,8000);
+
+// Redirigir al anuncio
+floatingAd.addEventListener("click", ()=>{
+  window.open("https://eminencehillsidenutrition.com/k6dgrqyc5g?key=a8ff3a3445842a223c56722310a7ef82","_blank");
+});
+
+// ===============================
+// CONTADOR DE MIEMBROS PERSISTENTE
+// ===============================
+let storedMembers = localStorage.getItem("members");
+let storedTimestamp = localStorage.getItem("membersTimestamp");
+let members = storedMembers ? parseInt(storedMembers) : 65324;
+let lastTimestamp = storedTimestamp ? parseInt(storedTimestamp) : Date.now();
+
+function updateMembersText() {
+  document.querySelector(".channel-info").textContent = 
+    `🤍María 🔞...Pirlo420🍀... y ${members.toLocaleString()} miembros más`;
+  localStorage.setItem("members", members);
+  localStorage.setItem("membersTimestamp", Date.now());
+}
+
+function calculateMembersIncrement() {
+  const now = Date.now();
+  const diffMs = now - lastTimestamp;
+
+  // Incremento cada 10 minutos (+5 o +10)
+  const tenMinMs = 10 * 60 * 1000;
+  const tenMinIncrements = Math.floor(diffMs / tenMinMs);
+  for (let i = 0; i < tenMinIncrements; i++) {
+    members += (Math.random() < 0.5 ? 5 : 10);
+  }
+
+  // Incremento cada 24 horas (+1000)
+  const dayMs = 24 * 60 * 60 * 1000;
+  const dayIncrements = Math.floor(diffMs / dayMs);
+  members += 1000 * dayIncrements;
+
+  updateMembersText();
+}
+
+// Inicializar incrementos pendientes
+calculateMembersIncrement();
+
+// Incrementos automáticos mientras la página esté abierta
+setInterval(()=>{
+  members += (Math.random() < 0.5 ? 5 : 10);
+  updateMembersText();
+}, 10 * 60 * 1000);
+
+setInterval(()=>{
+  members += 1000;
+  updateMembersText();
+}, 24 * 60 * 60 * 1000);
+
 </script>
 </body>
 </html>
