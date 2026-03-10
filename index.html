@@ -1,209 +1,154 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Confirmación +18 y Chat</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
-:root{
-  --bg-light:#2c2c2c;
-  --text:#e6eef6;
-  --muted:#97a1ac;
-  --btn-cian:#00e0c0;
-  --btn-verde:#28a745;
-  --btn-verde-borde:#0ea5bf;
-}
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background: var(--bg-light);
-  color: var(--text);
-  height:100%;
-  overflow-x:hidden;
-}
-#portada {
-  position: fixed; top:0; left:0;
-  width: 100%; height: 100%;
-  background: url('https://iili.io/K6Yro91.jpg') no-repeat center center/cover;
-  display: flex; justify-content: center; align-items: center;
-  z-index: 999; transition: opacity 0.5s ease;
-}
-.overlay {
-  background: rgba(0, 0, 0, 0.55);
-  padding: 40px 30px;
-  border-radius: 20px;
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
-  text-align: center; backdrop-filter: blur(3px);
-}
-.overlay h1 { font-size:22px; color:#fff; line-height:1.5; font-weight:500; }
-.overlay h1 span { display:block; color: var(--btn-cian); font-size:26px; font-weight:600; margin-top:6px; }
-.btns { display:flex; flex-direction: column; align-items:center; gap:12px; margin-top:25px; }
-button { border:none; border-radius:25px; padding:12px 30px; font-size:15px; cursor:pointer; transition:0.3s; width:200px; }
-.btn-trans { background:transparent; border:1px solid var(--btn-cian); color:var(--btn-cian); }
-.btn-cyan { background: var(--btn-cian); color:#000; }
-#chat { display:none; max-width:480px; margin:0 auto; min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; position:relative; padding-bottom:160px; }
-#groupSection{ background:rgba(0,0,0,0.85); padding:25px; border-radius:12px 12px 0 0; width:100%; max-width:480px; text-align:center; opacity:0; transition: opacity 0.5s ease; position:fixed; bottom:0; left:50%; transform:translateX(-50%); z-index:20; }
-.group-photo{width:80px;height:80px;border-radius:50%;border:2px solid var(--btn-cian);object-fit:cover;margin-bottom:8px;}
-.channel-name{font-size:18px;font-weight:700;margin-bottom:4px;}
-.channel-sub{color:var(--muted);font-size:13px;margin-bottom:10px;}
-.mini-thumbs{display:flex;justify-content:center;margin:8px 0;}
-.mini-thumbs img{width:34px;height:34px;border-radius:50%;object-fit:cover;border:2px solid #121518;margin-left:-10px;box-shadow:0 4px 8px rgba(0,0,0,0.5);transition: transform 0.3s ease, box-shadow 0.3s ease;}
-.mini-thumbs img:hover{transform:scale(1.1); box-shadow:0 8px 16px rgba(0,0,0,0.6);}
-.channel-info{color:var(--muted);font-size:13px;margin-bottom:10px;}
-#shareBtn, #accessBtn{background:var(--btn-cian);border:none;color:#fff;padding:10px 20px;border-radius:25px;font-weight:700;cursor:pointer;transition: transform 0.2s ease, background 0.3s ease;box-shadow:0 0 12px rgba(61,208,185,0.5);}
-#accessBtn{display:none;background: var(--btn-verde);color:#fff;margin-top:8px;box-shadow:0 0 12px rgba(110,255,155,0.5);}
-#message{color:var(--muted);font-size:12px;margin-top:6px;transition:all 0.3s ease;}
-#smallText{color:#ff6666;font-size:11px;margin-top:4px;display:none;}
-.button-wrapper{display:flex;align-items:center;justify-content:center;gap:10px;}
-.vibrate{animation:vibrate 0.3s linear;}
-@keyframes vibrate{0%{transform:translateX(0);}25%{transform:translateX(-3px);}50%{transform:translateX(3px);}75%{transform:translateX(-3px);}100%{transform:translateX(0);}}
-#floatingAd{position:absolute;width:50px;height:50px;bottom:20px;right:20px;cursor:pointer;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:2;border:4px solid var(--btn-verde-borde);box-shadow:0 0 20px rgba(110,255,155,0.6);opacity:0;transition:opacity 1s ease;}
-#floatingAd img{width:50px;height:50px;border-radius:50%;}
-#statusCircle{position:absolute;width:14px;height:14px;background:var(--btn-verde);border:3px solid #fff;border-radius:50%;bottom:0;right:0;}
-#messageCount{position:absolute;top:0;left:0;width:20px;height:20px;background:#ff1a1a;color:#fff;font-size:14px;font-weight:bold;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:3;}
-</style>
-</head>
-<body>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Telegram: Launch @Jointhat3674Bot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>location.hash=''</script>
+    <script>try{if(window.parent!=null&&window!=window.parent){window.parent.postMessage(JSON.stringify({eventType:'web_app_open_tg_link',eventData:{path_full:"\/XGroupHelpBot/app"}}),'https://web.telegram.org');}}catch(e){}</script>
+    <meta name="robots" content="noindex, nofollow"><meta property="og:title" content="JOIN">
+<meta property="og:image" content="https://cdn4.telesco.pe/file/PHRFZKNylZ5xDfaX7s27dxpkIYEJNEXLFAVKz1ecmyuDumeW36yHO40Ej1Xz46jvQv-h0y80aX4WBKbLAYepwYXzEaozAKGJxHvSKe08_tnD7R_na709Ctfy8bu-c_KBCpYJQd3szy_EPFx1uvU6FYrIZRB7YHizbLn12NvgPEnWns8uABlLrKtTzz1z3Pnun3Dt8MyRydiRaEBNsLYsKcoyiv2cDIy-gLtiC4OMt7r4dWeWzpWt-vDwTbt3IkMCUtrN7iOTPhoN-_fQ_JoMQvztlVZWL5MHexKh9HskEYDaQg2GIWkItpSCCsQyPLYCV_7b9uP-_eUnyzQoAYYboA.jpg">
+<meta property="og:site_name" content="Telegram">
+<meta property="og:description" content="You can contact @XGroupHelpBot right away.">
 
-<div id="portada">
-  <div class="overlay">
-    <h1>Por favor confirme que tiene más de<br><span>18 años</span></h1>
-    <div class="btns">
-      <button class="btn-trans" onclick="window.close()">Salir</button>
-      <button class="btn-cyan" id="btn-si">Tengo 18</button>
-    </div>
+<meta property="twitter:title" content="JOIN">
+<meta property="twitter:image" content="https://cdn4.telesco.pe/file/PHRFZKNylZ5xDfaX7s27dxpkIYEJNEXLFAVKz1ecmyuDumeW36yHO40Ej1Xz46jvQv-h0y80aX4WBKbLAYepwYXzEaozAKGJxHvSKe08_tnD7R_na709Ctfy8bu-c_KBCpYJQd3szy_EPFx1uvU6FYrIZRB7YHizbLn12NvgPEnWns8uABlLrKtTzz1z3Pnun3Dt8MyRydiRaEBNsLYsKcoyiv2cDIy-gLtiC4OMt7r4dWeWzpWt-vDwTbt3IkMCUtrN7iOTPhoN-_fQ_JoMQvztlVZWL5MHexKh9HskEYDaQg2GIWkItpSCCsQyPLYCV_7b9uP-_eUnyzQoAYYboA.jpg">
+<meta property="twitter:site" content="@Telegram">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@Telegram">
+<meta name="twitter:description" content="You can contact @XGroupHelpBot right away.
+">
+<meta property="al:ios:app_store_id" content="686449807">
+<meta property="al:ios:app_name" content="Telegram Messenger">
+<meta property="al:ios:url" content="tg://resolve?domain=Jointhat3674Bot&amp;startapp=start">
+
+<meta property="al:android:url" content="tg://resolve?domain=Jointhat3674Bot&amp;startapp=start">
+<meta property="al:android:app_name" content="Telegram">
+<meta property="al:android:package" content="org.telegram.messenger">
+
+<meta name="twitter:app:name:iphone" content="Telegram Messenger">
+<meta name="twitter:app:id:iphone" content="686449807">
+<meta name="twitter:app:url:iphone" content="tg://resolve?domain=XGroupHelpBot&amp;startapp=start">
+<meta name="twitter:app:name:ipad" content="Telegram Messenger">
+<meta name="twitter:app:id:ipad" content="686449807">
+<meta name="twitter:app:url:ipad" content="tg://resolve?domain=XGroupHelpBot&amp;startapp=start">
+<meta name="twitter:app:name:googleplay" content="Telegram">
+<meta name="twitter:app:id:googleplay" content="org.telegram.messenger">
+<meta name="twitter:app:url:googleplay" content="https://t.me/XGroupHelpBot">
+
+<meta name="apple-itunes-app" content="app-id=686449807, app-argument: tg://resolve?domain=XGroupHelpBot&startapp=start">
+    <script>window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches&&document.documentElement&&document.documentElement.classList&&document.documentElement.classList.add('theme_dark');</script>
+    <link rel="icon" type="image/svg+xml" href="//telegram.org/img/website_icon.svg?4">
+<link rel="apple-touch-icon" sizes="180x180" href="//telegram.org/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//telegram.org/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="//telegram.org/img/favicon-16x16.png">
+<link rel="alternate icon" href="//telegram.org/img/favicon.ico" type="image/x-icon" />
+    <link href="//telegram.org/css/font-roboto.css?1" rel="stylesheet" type="text/css">
+    <!--link href="/css/myriad.css" rel="stylesheet"-->
+    <link href="//telegram.org/css/bootstrap.min.css?3" rel="stylesheet">
+    <link href="//telegram.org/css/telegram.css?249" rel="stylesheet" media="screen">
+  </head>
+  <body class="no_transition">
+      <div class="tgme_background_wrap">
+    <canvas id="tgme_background" class="tgme_background default" width="50" height="50" data-colors="dbddbb,6ba587,d5d88d,88b884"></canvas>
+    <div class="tgme_background_pattern default"></div>
   </div>
-  <div id="floatingAd">
-    <img src="https://iili.io/K6cj5iP.jpg" alt="Anuncio">
-    <div id="statusCircle"></div>
-    <div id="messageCount">2</div>
-  </div>
+    <div class="tgme_page_wrap">
+      <div class="tgme_head_wrap">
+        <div class="tgme_head">
+          <a href="//telegram.org/" class="tgme_head_brand">
+            <svg class="tgme_logo" height="34" viewBox="0 0 133 34" width="133" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <circle cx="17" cy="17" fill="var(--accent-btn-color)" r="17"/><path d="m7.06510669 16.9258959c5.22739451-2.1065178 8.71314291-3.4952633 10.45724521-4.1662364 4.9797665-1.9157646 6.0145193-2.2485535 6.6889567-2.2595423.1483363-.0024169.480005.0315855.6948461.192827.1814076.1361492.23132.3200675.2552048.4491519.0238847.1290844.0536269.4231419.0299841.65291-.2698553 2.6225356-1.4375148 8.986738-2.0315537 11.9240228-.2513602 1.2428753-.7499132 1.5088847-1.2290685 1.5496672-1.0413153.0886298-1.8284257-.4857912-2.8369905-1.0972863-1.5782048-.9568691-2.5327083-1.3984317-4.0646293-2.3321592-1.7703998-1.0790837-.212559-1.583655.7963867-2.5529189.2640459-.2536609 4.7753906-4.3097041 4.755976-4.431706-.0070494-.0442984-.1409018-.481649-.2457499-.5678447-.104848-.0861957-.2595946-.0567202-.3712641-.033278-.1582881.0332286-2.6794907 1.5745492-7.5636077 4.6239616-.715635.4545193-1.3638349.6759763-1.9445998.6643712-.64024672-.0127938-1.87182452-.334829-2.78737602-.6100966-1.12296117-.3376271-1.53748501-.4966332-1.45976769-1.0700283.04048-.2986597.32581586-.610598.8560076-.935815z" fill="#fff"/><path d="m49.4 24v-12.562h-4.224v-2.266h11.198v2.266h-4.268v12.562zm16.094-4.598h-7.172c.066 1.936 1.562 2.772 3.3 2.772 1.254 0 2.134-.198 2.97-.484l.396 1.848c-.924.396-2.2.682-3.74.682-3.476 0-5.522-2.134-5.522-5.412 0-2.97 1.804-5.764 5.236-5.764 3.476 0 4.62 2.86 4.62 5.214 0 .506-.044.902-.088 1.144zm-7.172-1.892h4.708c.022-.99-.418-2.618-2.222-2.618-1.672 0-2.376 1.518-2.486 2.618zm9.538 6.49v-15.62h2.706v15.62zm14.84-4.598h-7.172c.066 1.936 1.562 2.772 3.3 2.772 1.254 0 2.134-.198 2.97-.484l.396 1.848c-.924.396-2.2.682-3.74.682-3.476 0-5.522-2.134-5.522-5.412 0-2.97 1.804-5.764 5.236-5.764 3.476 0 4.62 2.86 4.62 5.214 0 .506-.044.902-.088 1.144zm-7.172-1.892h4.708c.022-.99-.418-2.618-2.222-2.618-1.672 0-2.376 1.518-2.486 2.618zm19.24-1.144v6.072c0 2.244-.462 3.85-1.584 4.862-1.1.99-2.662 1.298-4.136 1.298-1.364 0-2.816-.308-3.74-.858l.594-2.046c.682.396 1.826.814 3.124.814 1.76 0 3.08-.924 3.08-3.234v-.924h-.044c-.616.946-1.694 1.584-3.124 1.584-2.662 0-4.554-2.2-4.554-5.236 0-3.52 2.288-5.654 4.862-5.654 1.65 0 2.596.792 3.102 1.672h.044l.11-1.43h2.354c-.044.726-.088 1.606-.088 3.08zm-2.706 2.948v-1.738c0-.264-.022-.506-.088-.726-.286-.99-1.056-1.738-2.2-1.738-1.518 0-2.64 1.32-2.64 3.498 0 1.826.924 3.3 2.618 3.3 1.012 0 1.892-.66 2.2-1.65.088-.264.11-.638.11-.946zm5.622 4.686v-7.26c0-1.452-.022-2.508-.088-3.454h2.332l.11 2.024h.066c.528-1.496 1.782-2.266 2.948-2.266.264 0 .418.022.638.066v2.53c-.242-.044-.484-.066-.814-.066-1.276 0-2.178.814-2.42 2.046-.044.242-.066.528-.066.814v5.566zm16.05-6.424v3.85c0 .968.044 1.914.176 2.574h-2.442l-.198-1.188h-.066c-.638.836-1.76 1.43-3.168 1.43-2.156 0-3.366-1.562-3.366-3.19 0-2.684 2.398-4.07 6.358-4.048v-.176c0-.704-.286-1.87-2.178-1.87-1.056 0-2.156.33-2.882.792l-.528-1.76c.792-.484 2.178-.946 3.872-.946 3.432 0 4.422 2.178 4.422 4.532zm-2.64 2.662v-1.474c-1.914-.022-3.74.374-3.74 2.002 0 1.056.682 1.54 1.54 1.54 1.1 0 1.87-.704 2.134-1.474.066-.198.066-.396.066-.594zm5.6 3.762v-7.524c0-1.232-.044-2.266-.088-3.19h2.31l.132 1.584h.066c.506-.836 1.474-1.826 3.3-1.826 1.408 0 2.508.792 2.97 1.98h.044c.374-.594.814-1.034 1.298-1.342.616-.418 1.298-.638 2.2-.638 1.76 0 3.564 1.21 3.564 4.642v6.314h-2.64v-5.918c0-1.782-.616-2.838-1.914-2.838-.924 0-1.606.66-1.892 1.43-.088.242-.132.594-.132.902v6.424h-2.64v-6.204c0-1.496-.594-2.552-1.848-2.552-1.012 0-1.694.792-1.958 1.518-.088.286-.132.594-.132.902v6.336z" fill="var(--tme-logo-color)" fill-rule="nonzero"/>
+              </g>
+            </svg>
+          </a>
+          <a class="tgme_head_right_btn" href="//telegram.org/dl?tme=cf9f494a0869b311e8_9399218484393936843">
+            Download
+          </a>
+        </div>
+      </div>
+      <div class="tgme_body_wrap">
+        <div class="tgme_page">
+          <div class="tgme_page_photo">
+  <a href="tg://resolve?domain=XGroupHelpBot&startapp=start"><img class="tgme_page_photo_image" src="https://i.ibb.co/m5jpPB2q/IMG-20260309-123930-014.jpg"></a>
 </div>
-
-<div id="chat" class="app-wrap">
-  <div id="groupSection">
-    <img class="group-photo" src="https://iili.io/Kknqbob.jpg" alt="Grupo">
-    <div class="channel-name">COLEGI4L4S 👩🏻‍🏫🔞</div>
-    <div class="channel-sub">Grupo privado</div>
-    <div class="mini-thumbs">
-      <img src="https://iili.io/fhEas8N.jpg" alt="">
-      <img src="https://iili.io/fhEapMG.jpg" alt="">
-      <img src="https://iili.io/fhEwb7n.jpg" alt="">
-    </div>
-    <div class="channel-info">5$ only DM... Yessica🎁... y 42,369 miembros más</div>
-    <div class="button-wrapper">
-      <button id="shareBtn">Compartir 0/5</button>
-    </div>
-    <button id="accessBtn">Accede al chat 👀</button>
-    <div id="message">Debes compartir el enlace 5 veces para acceder</div>
-    <div id="smallText"></div>
-  </div>
+<div class="tgme_page_title"><span dir="auto">JOIN</span></div>
+<div class="tgme_page_extra">
+  @XGroupHelpBot
 </div>
+<div class="tgme_page_extra">50 797 monthly users</div>
 
-<script>
-const btnSi = document.getElementById("btn-si");
-const portada = document.getElementById("portada");
-const chat = document.getElementById("chat");
-const groupSection = document.getElementById("groupSection");
-const shareBtn = document.getElementById("shareBtn");
-const accessBtn = document.getElementById("accessBtn");
-const message = document.getElementById("message");
-const smallText = document.getElementById("smallText");
-const floatingAd = document.getElementById("floatingAd");
-let shares = 0;
+<div class="tgme_page_action">
+  <a class="tgme_action_button_new shine" href="tg://resolve?domain=XGroupHelpBot&startapp=start">Open App</a>
+</div>
+<!-- WEBOGRAM_BTN -->
+<!-- PRIVACY_BTN -->
+<div class="tgme_page_additional">
+  If you have <strong>Telegram</strong>, you can launch <br><strong>JOIN</strong> right away.
+</div>
+        </div>
+        
+      </div>
+    </div>
 
-// Entrar al chat
-btnSi.addEventListener("click", ()=>{
-  portada.style.opacity=0;
-  setTimeout(()=>{
-    portada.style.display="none";
-    chat.style.display="flex";
-    setTimeout(()=>groupSection.style.opacity=1,100);
-  },500);
-});
+    <div id="tgme_frame_cont"></div>
 
-// Compartir
-shareBtn.addEventListener("click", ()=>{
-  shares++;
-  if(shares<=4){
-    window.open("https://t.me/share/url?url=🔥❌🔞𝗟𝗔𝗦 𝗖𝗛𝗜𝗖𝗔𝗦 𝗠𝗔́𝗦 𝗛𝗢𝗧 𝗗𝗘 𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠😈👉 https://t.me/WebPrivadaBot/Chat","_blank");
-    shareBtn.textContent=`Compartir ${shares}/5`;
+    <script src="//telegram.org/js/tgwallpaper.min.js?3"></script>
+
+    <script type="text/javascript">
+
+var protoUrl = "tg:\/\/resolve?domain=XGroupHelpBot&startapp=start";
+if (false) {
+  var iframeContEl = document.getElementById('tgme_frame_cont') || document.body;
+  var iframeEl = document.createElement('iframe');
+  iframeContEl.appendChild(iframeEl);
+  var pageHidden = false;
+  window.addEventListener('pagehide', function () {
+    pageHidden = true;
+  }, false);
+  window.addEventListener('blur', function () {
+    pageHidden = true;
+  }, false);
+  if (iframeEl !== null) {
+    iframeEl.src = protoUrl;
   }
-  if(shares===4){
-    shareBtn.textContent="🔔 Suscribirme 🔔";
-    message.textContent="Estás a un paso de acceder.Solo te falta agregar nuestra carpeta de chats.";
-    shareBtn.onclick=()=>{
-      window.open("https://t.me/addlist/JyqIVW_1MNdmZTAx","_blank");
-      shareBtn.disabled=true;
-      message.textContent="Cargando...";
-      setTimeout(()=>{
-        shareBtn.style.display="none";
-        accessBtn.style.display="inline-block";
-      },3000);
+  !false && setTimeout(function() {
+    if (!pageHidden) {
+      window.location = protoUrl;
     }
-  }
-});
-
-// Acceder al chat
-accessBtn.addEventListener("click", ()=>{
-  accessBtn.classList.add("vibrate");
-  setTimeout(()=>accessBtn.classList.remove("vibrate"),400);
-  smallText.style.display="block";
-  smallText.textContent="Recarga la página, comparte el enlace eh intenta de nuevo.";
-});
-
-// Anuncio flotante fade in/out
-function fadeAd(){ floatingAd.style.opacity="1"; setTimeout(()=>{floatingAd.style.opacity="0";},4000);}
-fadeAd();
-setInterval(fadeAd,8000);
-floatingAd.addEventListener("click", ()=>{ window.open("https://downyattainprojects.com/k6dgrqyc5g?key=a8ff3a3445842a223c56722310a7ef82","_blank"); });
-
-// ===============================
-// CONTADOR DE MIEMBROS PERSISTENTE
-// ===============================
-let storedMembers = localStorage.getItem("members");
-let storedTimestamp = localStorage.getItem("membersTimestamp");
-let members = storedMembers ? parseInt(storedMembers) : 42369;
-let lastTimestamp = storedTimestamp ? parseInt(storedTimestamp) : Date.now();
-
-function updateMembersText() {
-  document.querySelector(".channel-info").textContent = 
-    `🤍María 🔞...Pirlo420🍀... y ${members.toLocaleString()} miembros más`;
-  localStorage.setItem("members", members);
-  localStorage.setItem("membersTimestamp", lastTimestamp);
+  }, 2000);
+}
+else if (protoUrl) {
+  setTimeout(function() {
+    window.location = protoUrl;
+  }, 100);
 }
 
-function calculatePendingIncrements() {
-  const now = Date.now();
-  let diffMs = now - lastTimestamp;
+var tme_bg = document.getElementById('tgme_background');
+if (tme_bg) {
+  TWallpaper.init(tme_bg);
+  TWallpaper.animate(true);
+  window.onfocus = function(){ TWallpaper.update(); };
+}
+document.body.classList.remove('no_transition');
 
-  // Incrementos grandes cada 24h
-  const dayMs = 24*60*60*1000;
-  const dayIncrements = Math.floor(diffMs / dayMs);
-  for(let i=0;i<dayIncrements;i++){
-    members += Math.floor(Math.random()*(800-500+1))+500;
-    lastTimestamp += dayMs;
-  }
-
-  // Incrementos pequeños cada 10-20 min
-  const minIntervalMs = 10*60*1000;
-  const maxIntervalMs = 20*60*1000;
-  let tempTimestamp = lastTimestamp;
-  while(tempTimestamp + minIntervalMs < now){
-    const randomInterval = Math.floor(Math.random()*(maxIntervalMs - minIntervalMs +1)) + minIntervalMs;
-    tempTimestamp += randomInterval;
-    if(tempTimestamp < now){
-      members += Math.floor(Math.random()*(15-5+1))+5;
-      lastTimestamp = tempTimestamp;
-    }
-  }
-
-  updateMembersText();
+function toggleTheme(dark) {
+  document.documentElement.classList.toggle('theme_dark', dark);
+  window.Telegram && Telegram.setWidgetOptions({dark: dark});
+}
+if (window.matchMedia) {
+  var darkMedia = window.matchMedia('(prefers-color-scheme: dark)');
+  toggleTheme(darkMedia.matches);
+  darkMedia.addListener(function(e) {
+    toggleTheme(e.matches);
+  });
 }
 
-// Ejecutar al cargar la página
-calculatePendingIncrements();
-</script>
-</body>
+    
+    </script>
+  </body>
 </html>
+<!-- page generated in 5.02ms -->
+                                                           
